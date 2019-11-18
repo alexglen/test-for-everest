@@ -1,0 +1,128 @@
+@import "normalize";
+@import "variables";
+
+
+.second-part {
+    display: flex;
+    justify-content: space-between;
+    max-width: $containerStandardMaxWidth;
+    margin: 104px auto 0 auto !important;
+    padding: 0 22px;
+  
+    &-left {
+      &__title {
+        margin-top: 71px;
+        font-size: $fs * 3;
+        font-weight: 500;
+        line-height: $fs * 3;
+        max-width: 650px;
+  
+        span {
+          color: $secondColor;
+        }
+      }
+  
+      &__text {
+        margin-top: 68px;
+        font-size: $fs * 1.5;
+        font-weight: 300;
+        line-height: 40px;
+        color: $thirdColor;
+      }
+    }
+  
+    &-cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 112px;
+    }
+  
+    &-player {
+      cursor: pointer;
+    }
+  
+    &-player-small {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1020px) {
+    .last-img {
+      display: none;
+    }
+  
+    .second-part-left__title {
+      font-size: $fs * 2.5;
+    }
+  
+    .second-part-left__text {
+      margin-top: 8px;
+      font-size: $fs * 1.7;
+    }
+  
+    .second-part-cards {
+      margin-top: 52px;
+    }
+  }
+  
+  @media screen and (max-width: 840px) {
+    .second-part-cards {
+      margin-top: 32px;
+    }
+  
+    .second-part-player img {
+      width: 290px;
+      height: 486px;
+      cursor: pointer;
+    }
+  
+    .second-part-left__title {
+      margin-top: 18px;
+      font-size: $fs * 2.25;
+    }
+  
+    .second-part-left__text {
+      margin-top: 18px;
+      font-size: $fs * 1.5;
+    }
+  }
+  
+  @media screen and (max-width: 720px) {
+    .second-part-cards {
+      margin-top: 22px;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    .second-part {
+      margin-top: 59px;
+    }
+  
+    .second-part {
+      flex-direction: column;
+      margin-top: 54px !important;
+    }
+  
+    .second-part-cards {
+      display: none;
+    }
+  
+    .second-part-player img {
+      display: none;
+    }
+  
+    .second-part-player-small {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .second-part-left__title {
+      font-size: $fs * 1.5;
+    }
+    .second-part-left__text {
+      font-size: $fs * 1.125;
+    }
+  };

@@ -1,0 +1,124 @@
+@import "normalize";
+@import "variables";
+
+/*currencies-section*/
+.currencies-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+    &-cources {
+      &-wrapper {
+        width: 1181px;
+        overflow: hidden;
+      }
+  
+      display: flex;
+      justify-content: flex-start;
+      width: 9999px;
+  
+      .cource {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 228px;
+        margin-right: 10px;
+  
+        background: $firstColor;
+        border-radius: 10px;
+  
+        .cource__title {
+          margin-bottom: 0;
+          font-weight: bold;
+          font-size: 1.125 * $fs;
+          line-height: 30px;
+          color: $fourthColor;
+        }
+  
+        .cource__sum {
+          margin-top: 0;
+          font-weight: 300;
+          line-height: 40px;
+          font-size: $fs;
+        }
+      }
+    }
+  
+    &-left-arrow,
+    &-right-arrow {
+      cursor: pointer;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  
+    &-left-arrow {
+      margin-left: -13px;
+    }
+  
+    &-right-arrow {
+      margin-right: -13px;
+    }
+  }
+  
+  @media screen and (max-width: 1430px) {
+    .currencies-block-cources-wrapper {
+      width: 943px;
+    }
+  }
+  
+  @media screen and (max-width: 1168px) {
+    .currencies-block-cources {
+      &-wrapper {
+        width: 791px;
+      }
+  
+      .cource {
+        width: 190px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .currencies-block {
+      &-cources-wrapper {
+        width: 591px;
+      }
+  
+      &-left-arrow {
+        margin-left: -23px;
+      }
+  
+      &-right-arrow {
+        margin-right: -23px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 756px) {
+    .currencies-block-cources-wrapper {
+      width: 391px;
+    }
+  }
+  
+  @media screen and (max-width: 532px) {
+    .currencies-block-cources-wrapper {
+      width: 190px;
+    }
+  
+    .cource__title {
+      font-weight: bold;
+      font-size: $fs;
+    }
+  
+    .cource__sum {
+      font-size: $fs * 0.875;
+    }
+  }

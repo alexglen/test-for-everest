@@ -1,0 +1,147 @@
+@import "normalize";
+@import "variables";
+
+/*section app*/
+.app-block-wrap {
+  background: #fdfdfd;
+}
+.app {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1048px;
+    margin: 0 auto;
+    margin-top: 65px !important;
+    padding: 0 22px;
+    
+    &-information__banners {
+      padding-top: 92px;
+      cursor: pointer;
+  
+      img {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  
+    &-information__title {
+      padding-top: 92px;
+      font-size: $fs * 2.25;
+      line-height: 30px;
+    }
+  
+    &-information__text {
+      margin-top: 65px;
+      font-size: $fs * 1.5;
+      line-height: 40px;
+      color: $thirdColor;
+    }
+  }
+  
+  @media screen and (max-width: 920px) {
+    .app-information__banners {
+      padding-top: 42px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .app {
+      justify-content: space-around;
+    }
+  
+    .app-phone img {
+      width: 290px;
+      height: 375px;
+    }
+  
+    .app-information__banners img {
+      width: 172px;
+      height: 50px;
+    }
+  
+    .app-information__banners {
+      padding-top: 22px;
+    }
+  
+    .app-information__text {
+      font-size: $fs * 1.25;
+    }
+  
+    .app-information__title {
+      font-size: $fs * 1.5;
+      padding-top: 32px;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    .app {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-top: 40px !important;
+    }
+  
+    .app-information__title {
+      margin-top: 0;
+      padding-top: 41px;
+      font-size: $fs * 1.25;
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    .app-information__banners {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .app-information__text {
+      margin-top: 0;
+    }
+  
+    .app-information__title {
+      padding-top: 0;
+    }
+  
+    .app-phone {
+      margin-top: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .app {
+      flex-direction: column-reverse;
+  
+      &-information__text {
+        margin-top: 10px;
+        text-align: center;
+        font-size: $fs * 1.25;
+        line-height: 28px;
+      }
+  
+      &-information__title {
+        text-align: center;
+      }
+  
+      &-information__banners {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+  
+      &-phone {
+        margin: 40px auto 0 auto;
+  
+        img {
+          width: 240px;
+          height: 260px;
+        }
+      }
+    }
+  
+    .app-information__banners img {
+      width: 136px;
+      height: 40px;
+      margin: 0 4px;
+    }
+  };

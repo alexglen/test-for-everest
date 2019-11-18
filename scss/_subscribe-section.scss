@@ -1,0 +1,253 @@
+@import "normalize";
+@import "variables";
+
+/*section subscribe*/
+
+.subscribe-block {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1180px;
+    margin: 85px auto 0 auto !important;
+    padding: 0 22px;
+  
+    .price-block__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      & > *:first-child {
+        margin-right: 20px;
+      }
+    }
+  
+    &-prices {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      justify-content: space-between;
+      align-content: space-between;
+      margin-right: 20px;
+  
+      .price-block {
+        display: flex;
+        align-items: center;
+        width: 280px;
+        height: 188px;
+  
+        border-radius: 20px;
+        background: #fafafa;
+  
+        .price-block__title {
+          margin-right: 30px;
+          margin-left: 10px;
+          padding-left: 15px;
+          font-size: $fs * 1.125;
+          font-weight: 300;
+          line-height: 30px;
+          color: $fifthColor;
+        }
+  
+        .price-block__value {
+          margin-right: 40px;
+          padding-left: 25px;
+          color: $secondColor;
+          font-size: $fs * 1.5;
+          line-height: 30px;
+        }
+      }
+    }
+  
+    &-email {
+      width: 580px;
+      padding-bottom: 35px;
+      background: #fafafa;
+      border-radius: 20px;
+      text-align: center;
+  
+      .email-block__title {
+        padding-top: 40px;
+        font-size: $fs * 2.25;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: center;
+      }
+  
+      .email-block__text {
+        margin-top: 31px;
+        line-height: 19px;
+        color: $thirdColor;
+        text-align: center;
+        font-weight: 300;
+      }
+  
+      .email-input {
+        width: 70%;
+        margin: 36px auto 25px auto;
+        padding-bottom: 3px;
+        line-height: normal;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1.11px solid $sixthColor;
+  
+        &::-webkit-input-placeholder {
+          color: $seventhColor;
+          line-height: normal;
+          text-align: center;
+          font-size: 20px;
+        }
+  
+        &::-moz-placeholder {
+          font-size: 20px;
+          color: $seventhColor;
+          line-height: 28px;
+          text-align: center;
+        }
+  
+        &:-moz-placeholder {
+          font-size: 20px;
+          color: $seventhColor;
+          line-height: 28px;
+          text-align: center;
+        }
+  
+        &:-ms-input-placeholder {
+          font-size: 20px;
+          color: $seventhColor;
+          line-height: 28px;
+          text-align: center;
+        }
+      }
+  
+      .email-block__checkbox input {
+        background: $eighthColor;
+      }
+  
+      .email-block__checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        color: $thirdColor;
+        cursor: pointer;
+  
+        input {
+          display: none;
+        }
+  
+        .fake {
+          position: relative;
+          z-index: 5;
+  
+          &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            z-index: 10;
+            background-color: "green";
+          }
+        }
+      }
+  
+      .email-block__button {
+        display: block;
+        width: 200px;
+        height: 55.56px;
+        margin: 37px auto 0 auto;
+        background-color: $secondColor;
+        color: $firstColor;
+        border-radius: 90px;
+        box-shadow: 0 8px 20px rgba(92, 168, 255, 0.3);
+        border: 1px solid rgba(27, 26, 26, 0.03);
+        cursor: pointer;
+        outline: none;
+  
+        &:hover {
+          background-color: #788fd8;
+        }
+  
+        &:active {
+          box-shadow: 0 8px 20px rgba(92, 168, 255, 0.3);
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1240px) {
+    .subscribe-block-prices .price-block {
+      width: 220px;
+      height: 182px;
+    }
+  }
+  
+  @media screen and (max-width: 1040px) {
+    .subscribe-block-email {
+      height: 350px;
+    }
+  
+    .subscribe-block-prices .price-block {
+      width: 220px;
+      height: 164px;
+    }
+  
+    .price-block__title {
+      font-size: $fs;
+      line-height: 25px;
+      text-align: center;
+    }
+  
+    .price-block__value {
+      font-size: $fs * 1.25;
+      line-height: 30px;
+      text-align: center;
+    }
+  
+    .subscribe-block-prices .price-block .price-block__title {
+      margin-right: 0;
+    }
+  
+    .subscribe-block-prices .price-block .price-block__value {
+      margin-right: 0;
+    }
+  
+    .subscribe-block-email .email-block__title {
+      font-size: $fs * 1.5;
+      font-weight: bold;
+      padding-top: 16px;
+    }
+  
+    .subscribe-block-email .email-block__text {
+      font-size: $fs * 0.875;
+    }
+  }
+  
+  @media screen and (max-width: 760px) {
+    .subscribe-block {
+      margin-top: 45px !important;
+    }
+  
+    .subscribe-block-prices {
+      display: none;
+    }
+  
+    .subscribe-block-email {
+      width: 70%;
+      min-width: 280px;
+      margin: 0 auto;
+      height: 360px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .subscribe-block-email {
+      width: 90%;
+      height: 360px;
+    }
+  
+    .subscribe-block-email .email-block__button {
+      height: 50px;
+      width: 220px;
+    }
+  };  

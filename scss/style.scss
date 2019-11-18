@@ -1,0 +1,79 @@
+@import "normalize";
+@import "variables";
+@import "currencies-section";
+@import "exchange-section";
+@import "header";
+@import "footer";
+@import "forms";
+@import "menu";
+@import "second-section";
+@import "section-app";
+@import "services-section";
+@import "subscribe-section";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: $fs;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.first-fon {
+  background: url('../assets/fon.png');
+  background-size: cover;
+}
+
+.second-fon {
+  background: url('../assets/fon4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .first-fon {
+    background-image: url('../assets/fon2.png');
+  }
+  .second-fon {
+    background-image: url('../assets/fon5.png');
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .first-fon {
+    background-image: url('../assets/fon3.png');
+  }
+  .second-fon {
+    background-image: url('../assets/fon6.png');
+  }
+}
+
+.wrap {
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrap1 {
+  width: 100% !important;
+  background-color: #FAFAFA !important;
+}
+
+.backdrop {
+  opacity: 0.1;
+}
+
+@media screen and (max-width: 1180px) {
+  .wrap {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+};
